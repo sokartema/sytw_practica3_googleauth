@@ -47,9 +47,13 @@ end
 
 get '/orchestrate/:name' do
 
+  @r = nil
   config = YAML.load_file 'config/config.yml'
   client = Orchestrate::Client.new(config['orchestrate'])
+
+  while @r == nil do
   @r = client.get(:items,params[:name])
+  end
   puts @r.body
   erb :orchestrate
 
