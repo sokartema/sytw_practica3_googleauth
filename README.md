@@ -9,6 +9,7 @@ a la pagina donde le muestro la información descargada de orchestrate.
 `rake` o `rake init` para iniciar el servidor. Para mas información `rake -T`
 
 
-> Jazer Abreu -> alu0100595727
+
+*Jazer Abreu -> alu0100595727*
 
 ***Universidad de la Laguna - Sistemas y Tecnologías Web***
