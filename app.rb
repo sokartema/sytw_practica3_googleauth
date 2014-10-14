@@ -40,6 +40,7 @@ get '/auth/:name/callback' do
   hash = {:info => @auth['info']}
   hash[:credentials] = @auth['credentials']
   client.put(:items , nombre , hash)
+  client.ping()
   redirect "/orchestrate/#{nombre}"
 
 end
