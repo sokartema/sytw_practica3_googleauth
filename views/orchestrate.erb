@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>Inicio</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="/css/lavish-bootstrap.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+<body>
+ <nav class="navbar navbar-inverse" role="navigation">
+ <div class="navbar-header">
+
+ <img class="pull-left" src="/icons/Google.png" alt="Icono google" style="width:50px; height=50px">
+ <a class="navbar-brand" href="#">Practica Google Auth</a>
+
+
+ </div>
+ </nav>
+
+
+ <div class="container">
+   <div class= "row">
+     <div class= "col-md-1" >
+     </div>
+     <div class = "col-md-10">
+         <div class = "jumbotron">
+           <div class = "container">
+
+
+        <h4><b><%= @r.body['info']['first_name'] %> <%= @r.body['info']['last_name']%></b></h4> <br>
+        <img class= "img-rounded pull-right" src="<%=@r.body['info']['image'] %>" alt"Imagen Usuario" height = "50px" width = "50px">
+              <p> Email: <%= @r.body['info']['email']%></p>
+              <p> URLS: </p>
+              <ul>
+              <% @r.body['info']['urls'].each do |key,value| %>
+              <li>
+
+                <%= key %> : <%= value %>
+
+              </li>
+
+              <% end %>
+              </ul>
+              <p> Credentials: </p>
+              <ul>
+                <% @r.body['credentials'].each do |key,value| %>
+                  <li>
+                  <%= key %> : <%=value%>
+                  </li>
+
+                <% end %>
+              </ul>
+            </div>
+          </div>
+       </div>
+
+     <div class = "col-md-1">
+     </div>
+
+   </div>
+
+ </div>
+
+
+ <div class="navbar navbar-inverse navbar-fixed-bottom">
+   <a class="navbar-brand" href="http://www.ull.es/view/centros/etsii/Inicio/es">ETSII ULL</a>
+   <a class="navbar-brand pull-right" href="https://github.com/alu0100595727">alu0100595727 Jazer Abreu</a>
+ </div>
+</body>
+</html>
