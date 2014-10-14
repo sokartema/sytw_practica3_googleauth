@@ -1,16 +1,14 @@
 # Authenticating with Google
 
-See these links:
+Esta practica permite la autentificación en google de un usuario, posteriormente guardo la información del usuario y su token de sesión junto con
+sus credenciales en la plataforma orchestrate, que me permite guardar toda esta información en forma de hash. Por ultimo redirijo al usuario
+a la pagina donde le muestro la información descargada de orchestrate.
 
-* [Strategy to authenticate with Google via OAuth2 in OmniAuth.](https://github.com/zquestz/omniauth-google-oauth2)
-* [A gem containing a generic OAuth2 strategy for OmniAuth](https://github.com/intridea/omniauth-oauth2) 
+## Modo de uso
 
-Get your API key at: 
+`rake` o `rake init` para iniciar el servidor. Para mas información `rake -T`
 
-[https://code.google.com/apis/console](https://code.google.com/apis/console/)
 
-Note the *Client ID* and the *Client Secret*.
+> Jazer Abreu -> alu0100595727
 
-For more details, read the Google docs: 
-
-[https://developers.google.com/accounts/docs/OAuth2](https://developers.google.com/accounts/docs/OAuth2)
+***Universidad de la Laguna - Sistemas y Tecnologías Web***
