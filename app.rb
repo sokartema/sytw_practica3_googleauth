@@ -42,7 +42,6 @@ get '/auth/:name/callback' do
   client.put(:items , nombre , hash)
   redirect "/orchestrate/#{nombre}"
 
-
 end
 
 get '/orchestrate/:name' do
